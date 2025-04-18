@@ -1,38 +1,71 @@
-# Forest-Fire-Detection-Using-Deep-learning
-# WEEK 2
-1. Data Acquisition and Setup 🔍🧠
+#Forest Fire Detection using Deep Learning 🔥
+#Objective
+The goal of this project is to build a deep learning model that can accurately detect forest fires from images. This solution aims to support real-time wildfire monitoring and contribute to disaster prevention efforts.
 
-  I started off by using kagglehub to download the Wildfire Dataset from Kaggle.
-  Then, I imported all the necessary libraries like os, numpy, matplotlib, tensorflow, etc. 🧰
-  I also checked if a GPU was available to speed up training ⚡
-  Next, I defined the paths to my training, validation, and testing datasets so everything was well organized 📁
+#Technologies Used
+Programming Language: Python
 
-2. Data Exploration 🔥🖼️
+Framework: TensorFlow / Keras
 
-  I listed out the classes (fire and no_fire) and checked how many images each class had.
-  To get a feel for the data, I visualized a few sample images from both categories.
-  Also, I printed the shape of the images to understand their dimensions 📐
+Libraries: NumPy, Matplotlib, OpenCV, PIL, Streamlit
 
-3. Data Preprocessing 🧹📊
+Dataset: Wildfire Dataset from Kaggle
 
-  I set the image height and width, and chose a good batch size.
-  Then, I created ImageDataGenerator instances to rescale pixel values to the [0, 1] range.
-  Using flow_from_directory, I generated image batches for training, validation, and testing.
-  Finally, I mapped class indices to their actual names for easier interpretation 🧠
+Deployment Tool: Streamlit
 
-4. Model Building 🏗️🤖
+##Project Overview
+#Data Acquisition and Setup
+Downloaded the Wildfire Dataset using the Kaggle API.
 
-  I built a Convolutional Neural Network (CNN) using keras.Sequential. Here's what the model includes:
-  An input layer to take in the images
+Organized image data into separate folders for fire and no_fire classes.
 
-  Multiple Conv2D layers to extract important features 🧬
+Loaded all necessary libraries and checked for GPU support to optimize model training.
 
-  MaxPooling2D layers to reduce spatial dimensions
+#Data Exploration and Preprocessing
+Visualized sample images to understand the dataset.
 
-  A Flatten layer to convert everything into a single vector
+Checked class distribution and image shapes for consistency.
 
-  Dense layers for learning and classification
+Applied preprocessing using ImageDataGenerator to normalize pixel values and split the data into training, validation, and test sets.
 
-  A Dropout layer to help prevent overfitting 💧
+Mapped class indices to readable labels.
 
-  And finally, an output layer with a sigmoid activation for binary classification (fire 🔥 or no fire 🌲)
+#Model Building
+Designed a Convolutional Neural Network (CNN) using Keras' Sequential API:
+
+Multiple Conv2D and MaxPooling2D layers for feature extraction.
+
+Flatten and Dense layers for classification.
+
+Dropout layer to prevent overfitting.
+
+Final output layer with sigmoid activation for binary classification.
+
+#Model Training
+Compiled the model using the Adam optimizer and binary cross-entropy loss.
+
+Trained the model with validation monitoring.
+
+Implemented EarlyStopping and ModelCheckpoint to save the best weights during training.
+
+#Model Evaluation
+Evaluated the trained model on the test dataset.
+
+Measured performance using accuracy, precision, recall, and F1-score.
+
+Visualized results using a confusion matrix to analyze predictions.
+
+#Predictions and Testing
+Ran predictions on new/unseen images to test the model's generalization.
+
+Compared predicted labels with actual labels for accuracy validation.
+
+#Deployment
+Built a clean and interactive Streamlit web app for real-time forest fire detection.
+
+Users can upload an image, and the model predicts whether there’s a fire or no fire.
+
+Displayed confidence scores along with predictions.
+
+#Final Outcome
+The model successfully classifies images as fire or no fire with high accuracy. The deployed app makes it easy for users to use the model for practical, real-time wildfire detection tasks.
