@@ -1,5 +1,5 @@
 # 🌲 Forest Fire Detection using Deep Learning 🔥
-
+## WEEK 3
 ## 🎯 Objective
 The goal of this project is to build a deep learning model that can accurately detect forest fires from images. This solution aims to support real-time wildfire monitoring and contribute to disaster prevention efforts.
 
