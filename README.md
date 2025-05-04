@@ -30,9 +30,9 @@ The goal of this project is to build a deep learning model that can accurately d
 ### 🏗️ Model Building
 Designed a **Convolutional Neural Network (CNN)** using Keras' Sequential API:
 - Conv2D and MaxPooling2D layers for feature extraction  
-- Flatten and Dense layers for classification  
-- Dropout layer to reduce overfitting  
-- Output layer with sigmoid activation for binary classification  
+- Flatten and Dense layers for classification.  
+- Dropout layer to reduce overfitting. 
+- Output layer with sigmoid activation for binary classification.  
 
 ### 🏋️ Model Training
 - Compiled the model using the **Adam optimizer** and **binary cross-entropy** loss.  
